@@ -11,7 +11,7 @@ namespace CourierCodeChallenge.Core.Validators
              .GreaterThan(0).WithMessage("Package weight should be greater than 0");
 
             RuleFor(x => x.Weight)
-             .LessThanOrEqualTo(maxLoad).WithMessage(x => $"Package weight({x.Weight}) should not be greater than max load({maxLoad})");
+             .LessThanOrEqualTo(maxLoad).WithMessage(x => $"Package weight({x.Weight}) should not be greater than vehicle max load({maxLoad})");
 
             RuleFor(x => x.Distance)
              .GreaterThan(0).WithMessage("Package delivery distance should be greater than 0");
