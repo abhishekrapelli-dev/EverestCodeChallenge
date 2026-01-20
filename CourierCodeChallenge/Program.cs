@@ -15,7 +15,7 @@ while (keepRunning)
     Console.WriteLine("Welcome, to Courier Management System!");
     Console.WriteLine("");
     Console.WriteLine("");
-    Console.WriteLine("Kindly enter delivery cost and number of packages in number format only, as '[DeliveryCost]<space>[No. of Packages]'");
+    Console.WriteLine("Kindly enter base delivery cost and number of packages in number format only, as '[BaseDeliveryCost]<space>[No. of Packages]'");
 
     int baseDeliveryCost = 0;
     int numberOfPackages = 0;
@@ -29,18 +29,18 @@ ReadDeliveryCostAndPackagesCount:
         if (!int.TryParse(readDeliveryCostAndNoOfPackages[0], out baseDeliveryCost)
             || !int.TryParse(readDeliveryCostAndNoOfPackages[1], out numberOfPackages))
         {
-            Console.WriteLine("Error => Delivery Cost or Number of Packages is not entered in correct format");
-            Console.WriteLine("Kindly enter delivery cost and number of packages in number format only, as '[DeliveryCost]<space>[No. of Packages]'");
+            Console.WriteLine("Error => Base Delivery Cost or Number of Packages is not entered in correct format");
+            Console.WriteLine("Kindly enter base delivery cost and number of packages in number format only, as '[DeliveryCost]<space>[No. of Packages]'");
             goto ReadDeliveryCostAndPackagesCount;
         }
     }
     else
     {
-        Console.WriteLine("Error => Incomplete details entered, Please enter as '[DeliveryCost]<space>[No. of Packages]'");
+        Console.WriteLine("Error => Incomplete details entered, Please enter as '[BaseDeliveryCost]<space>[No. of Packages]'");
         goto ReadDeliveryCostAndPackagesCount;
     }
 
-    Console.WriteLine("Delivery Cost => " + baseDeliveryCost);
+    Console.WriteLine("Base Delivery Cost => " + baseDeliveryCost);
     Console.WriteLine("Number of Packages => " + numberOfPackages);
 
     Console.WriteLine("");
